@@ -1,0 +1,158 @@
+.rate-app {
+    width: 620px;
+    padding: 75px 0 0 100px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin-bottom: 4vh;
+    color: #5D5D5D;
+}
+
+.choose-currency {
+    display: flex;
+    align-items: center;
+}
+
+.convert-base-text {
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5D5D5D;
+}
+
+.currency-selection {
+    margin-left: 5vh;
+}
+
+.label-text {
+    color: purple;
+    vertical-align: super;
+    font-size: smaller;
+    margin-bottom: 1vh;
+}
+
+.dropdown-currencies {
+    width: 158px;
+    height: 35px;
+    position: relative;
+    border: 1px solid darkgray;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
+    background-image: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 0.06));
+}
+
+.dropdown-currencies:before,
+.dropdown-currencies:after {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 10px;
+    border: 4px dashed;
+    border-color: #888888 transparent;
+    pointer-events: none;
+}
+
+.dropdown-currencies:before {
+    border-top: none;
+}
+
+.dropdown-currencies:after {
+    margin-top: 7px;
+    border-bottom: none;
+}
+
+.currency-select {
+    width: 158px;
+    height: 35px;
+    position: relative;
+    padding: 6px 8px 6px 10px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 15px;
+    color: #62717a;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.one-currency {
+    line-height: 25px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+
+.rate-convert-section {
+    margin-top: 3vh;
+    margin-right: 4vh;
+}
+
+.rate-input {
+    width: 150px;
+    height: 35px;
+    padding: 3px;
+    border: 1px solid darkgray;
+    border-radius: 5px;
+    outline: none;
+}
+
+.rate-input:focus {
+    border: 1px solid #03A9F4;
+    box-shadow: 0 0 1px 0px black;
+}
+
+.currency-convert-value {
+    font-weight: bold;
+    font-size: larger;
+    margin-left: 5vh;
+}
+
+.bit-coin-area {
+    margin-top: 10%;  
+}
+
+.click-toggle,
+.refresh {
+    font-style: italic;
+    color: purple;
+    cursor: pointer;
+}
+
+.refresh {
+    display: flex;
+    align-items: center;
+}
+
+.bit-coin-loader {
+    display: inline-block;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+.current-bitCoin-rate-area {
+    display: inline-flex;
+}
+
+.current-bitCoin-rate-area div {
+    position: relative;
+}
+
+.current-bitCoin-rate-area hr {
+    position: absolute;
+    width: 410px;
+}
+
+.current-bitCoin-rate-area>p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px; 
+    color: #5D5D5D;
+}
+
+.current-bitCoin-rate-area>b {
+    display: flex;
+    align-items: center;
+    margin-left: 7px;
+    margin-right: 7px;
+    font-size: larger;
+}
