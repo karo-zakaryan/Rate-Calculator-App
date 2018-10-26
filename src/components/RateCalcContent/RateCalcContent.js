@@ -8,7 +8,7 @@ export default class RateCalculatorContent extends Component {
             inputValue: ""
         }
         this.convertMoneyHandler = this.convertMoneyHandler.bind(this);
-        this.convertMoneyCalc = this.convertMoneyCalc.bind(this);
+        this.convertMoneyCalculator = this.convertMoneyCalculator.bind(this);
     }
 
     convertMoneyHandler(event) {
@@ -19,7 +19,7 @@ export default class RateCalculatorContent extends Component {
         });
     }
 
-    convertMoneyCalc() {
+    convertMoneyCalculator() {
         if ((this.state.inputValue / this.props.currencyMoney) > 0) {
             const convertValue = this.state.inputValue / this.props.currencyMoney;
             return convertValue.toFixed(3);
@@ -35,7 +35,7 @@ export default class RateCalculatorContent extends Component {
                     <input className="rate-input" type="text" onChange={this.convertMoneyHandler}/>
 
                     <span className="currency-convert-value">
-                        AMD = {this.convertMoneyCalc()} {this.props.currencyRate}
+                        AMD = {this.convertMoneyCalculator()} {this.props.currencyRate}
                     </span>
             </div> 
         );

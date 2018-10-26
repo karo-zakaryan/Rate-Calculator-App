@@ -17,10 +17,9 @@ class App extends Component {
     fetch("http://cb.am/latest.json.php")
       .then(data => data.json())
       .then(data => {
-        console.log(data.RUB);
             this.setState({
               data: data,
-              isLoad: !this.state.isLoad
+              isLoad: !this.state.isLoad,
             });
       });
   }
