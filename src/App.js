@@ -9,7 +9,8 @@ class App extends Component {
 
     this.state = {
       data: null,
-      isLoad: false
+      isLoad: false,
+      test: false
     }
   };
 
@@ -28,15 +29,15 @@ class App extends Component {
     return (
       <main className="App">
         {
-          (this.state.isLoad) 
+          (this.state.isLoad)
           ? <RateCalculator currency={this.state.data} />
           : <div className="loader-section">
-                <h1 className="bubble-loader">Fetching Data 
+                <h1 className="bubble-loader">Fetching Data
                     <ReactLoading className="bubble-loader" type={"bubbles"} color={"red"}  width={250} />
-                </h1> 
+                </h1>
             </div>
         }
-        
+
       </main>
     );
   }
