@@ -77,7 +77,7 @@ export default class RateBitCoinContent extends Component {
                                 </span>
                                 <br />
                                 <i>(BTC rate automatically will be updated every 3 minutes)</i>
-                            </div>
+gi                            </div>
                         :
                             <div>
                                 <p onClick={this.showBitCoinHandler} className="click-toggle">Show Bitcoin rate</p>

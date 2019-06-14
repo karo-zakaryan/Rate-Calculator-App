@@ -9,7 +9,7 @@ export default class RateCalculator extends Component {
 
         this.state = {
             currentCurrency: 'USD',
-            currencyValue: props.currency["USD"]
+            currencyValue: props.currency["USD"],
         }
 
     this.selectHandler = this.selectHandler.bind(this);
@@ -33,7 +33,7 @@ export default class RateCalculator extends Component {
                     </p>
 
                     <div className="currency-selection">
-                        <span className="label-text">Select / Select</span>
+                        <span className="label-text">Select/Select</span>
                         <div className="dropdown-currencies">
                             <select className="currency-select" defaultValue="USD" onChange={this.selectHandler}>
                                 <option>USD</option>

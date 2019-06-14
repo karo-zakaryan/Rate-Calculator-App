@@ -1,54 +1,51 @@
 import React, {Component} from 'react';
 import RateCalculatorContent from "./RateCalcContent/RateCalcContent";
 import RateBitCoinContent from "./RateBitCoinContent/RateBitCoinContent";
-import "./RateCalcHeader.css";
+import "./RateCalculator.css";
 
 export default class RateCalculator extends Component {
-
     constructor(props) {
         super(props);
 
         this.state = {
-            currentCurrency: "USD"
+            currentCurrency: 'USD',
+            currencyValue: props.currency["USD"],
         }
 
-        this.selectHandler = this.selectHandler.bind(this);
+    this.selectHandler = this.selectHandler.bind(this);
     }
-
-
+    
     selectHandler(event) {
-        const currenceValue = event.target.value;
-
+        const selectedValue = event.target.value;
         this.setState({
-            currency: currenceValue
+            currentCurrency: selectedValue,
+            currencyValue: this.props.currency[selectedValue]
         });
-
-        event.preventDefault();
     }
 
     render() {
         return (
-            <div className="App-Header">
+            <div className="rate-app">
                 <h1>Rate Calculator</h1>
-                <div className="container-div">
-                    <p className="convertAMDText">
+                <div className="choose-currency">
+                    <p className="convert-base-text">
                         Convert AMD to: 
                     </p>
 
-                    <div className="select-div">
-                        <span className="labelText">Select / Select</span>
-                        <div className="dropdownRates">
-                            <select className="selectRate" onChange={this.selectHandler}>
+                    <div className="currency-selection">
+                        <span className="label-text">Select/Select</span>
+                        <div className="dropdown-currencies">
+                            <select className="currency-select" defaultValue="USD" onChange={this.selectHandler}>
                                 <option>USD</option>
                                 <option>EUR</option>
                                 <option>RUB</option>
                                 <option>GBP</option>
                             </select>
                         </div>
-                        <span className="currence">(1 USD = 484.13 AMD)</span>
+                        <span className="one-currency">(1 {this.state.currentCurrency} = {this.props.currency[this.state.currentCurrency]} AMD)</span>
                     </div>               
                 </div>
-                <RateCalculatorContent />
+                <RateCalculatorContent currencyMoney={this.state.currencyValue} currencyRate={this.state.currentCurrency}/>
                 <RateBitCoinContent />
             </div>
         );
